@@ -1,14 +1,14 @@
 {
     "name": "Gateway-Service",
-    "description": "Provides routing capabilities and serves as the 'front door' to all incoming service requests.",
-    "repository": "https://github.com/Prempeh-Gyan/1.4-Gateway-Service",
+    "description": "Provides authentication and authorization functionalities for the services in the 'Bootiful Microservices' series",
+    "repository": "https://github.com/Prempeh-Gyan/1.3-OAuth2-Service",
     "logo": "https://i.imgur.com/NaAbFil.png",
     "success_url": "/",
     "keywords": [
         "Java",
         "Spring",
-        "Zuul",
-        "Hystrix",
+        "Security",
+        "OAuth2",
         "Microservices"
     ],
     "env": {
