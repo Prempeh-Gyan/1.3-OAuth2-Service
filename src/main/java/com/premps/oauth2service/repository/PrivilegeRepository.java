@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.premps.oauth2service.model.CustomGrantedAuthority;
 
-
 @Repository
 public interface PrivilegeRepository extends JpaRepository<CustomGrantedAuthority, Long> {
 

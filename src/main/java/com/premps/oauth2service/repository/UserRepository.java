@@ -6,8 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import com.premps.oauth2service.model.User;
 
-
-
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
@@ -16,5 +14,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	User findOne(long id);
 
 	void delete(User user);
-	
+
 }

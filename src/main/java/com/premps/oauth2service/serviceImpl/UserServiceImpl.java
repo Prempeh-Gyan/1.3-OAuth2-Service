@@ -59,12 +59,12 @@ public class UserServiceImpl implements UserService {
 			}
 			return authorities;
 		}
-		
+
 		@Override
 		public String getFirstName() {
 			return super.getFirstName();
 		}
-		
+
 		@Override
 		public String getLastName() {
 			return super.getLastName();

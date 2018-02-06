@@ -45,16 +45,6 @@ public class Oauth2Controller {
 		return userDetails;
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = { "/get-user" })
-	public User getUser(OAuth2Authentication oAuth2Authentication) {
-		return (User) oAuth2Authentication.getUserAuthentication().getPrincipal();
-	}
-
-	@RequestMapping(method = RequestMethod.GET, value = { "/get-something" })
-	public String getSomething() {
-		return "something special from the backend!";
-	}
-
 	@RequestMapping(method = RequestMethod.POST, value = { "/add-user" })
 	public String addUser(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName,
 			@RequestParam("email") String email, @RequestParam("password") String password) {

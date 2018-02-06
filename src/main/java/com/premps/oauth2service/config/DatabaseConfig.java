@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = {
-		"com.premps.oauth.repository" }, entityManagerFactoryRef = "entityManagerFactory")
+		"com.premps.oauth2service.repository" }, entityManagerFactoryRef = "entityManagerFactory")
 public class DatabaseConfig {
 
 	@Value("${spring.datasource.driver-class-name}")
@@ -55,7 +55,7 @@ public class DatabaseConfig {
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setDataSource(dataSource());
-		factory.setPackagesToScan("com.premps.oauth.model");
+		factory.setPackagesToScan("com.premps.oauth2service.model");
 		factory.setJpaProperties(hibernateProperties());
 		return factory;
 	}

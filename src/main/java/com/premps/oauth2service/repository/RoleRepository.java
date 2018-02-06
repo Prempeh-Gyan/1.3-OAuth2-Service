@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.premps.oauth2service.model.Role;
 
-
-
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
 
