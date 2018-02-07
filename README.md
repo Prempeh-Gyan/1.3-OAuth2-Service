@@ -43,7 +43,8 @@ The `Income Service` upon recieving the confirmation from the `Authorization Ser
 
 Imagine also again, that the user now wishes to have a summary of his income details, but unfortunately the `Income Service` doesn't offer this service.
 Fortunately for him he finds a web application online that does exactly this. Lets assume this web application is callled `Income Summarizer`.
-Now what you have to be aware of is that, this `Income Summarizer` is a third party application, it could as well be an independent service provided in the `Bootiful Microservices` series, just like the `Income Service`, it doesn't really matter, because the point is, between the `Authorization Server` and the `Income Service`, any other service/script/etc that wishes to interact with either of the two, is a third party service period.
+
+Now what you have to be aware of is that, this `Income Summarizer` is a third party application, it could as well be an independent service provided in the `Bootiful Microservices` series, just like the `Income Service`, it doesn't really matter, because the point is, between the `Authorization Server` and the `Income Service`, any other service/script/etc that wishes to interact with either of the two, is a third party service, period.
 
 Now if the user wishes to run a summary on his income using the `Income Summarizer`, then since the data concerning his income is with the `Income Service`, his challenge will then be to get his data from the `Income Service` into the `Income Summarizer` so he can run his summary.
 
@@ -53,7 +54,8 @@ In the context of microservices - in this case the `Bootiful Microservices` seri
 * The `Income Summarizer` web application, is a `Client`(a third party application/script/etc)
 * The `User` is a `Resource Owner`(owns his account details with the `Authorization Server` and his income details whth the `Income Service`)
 
-Now under OAuth2 flow, with a `Resource Owner's` permission, a `Client` can request for a `Resource Owner's` protected resources on his behalf. For this to work, the `Client` must be registered with the `Authorization Server` as a so called third party application, in which case the `Authorization Server` will be aware of both the `User` and the `Client` who wishes to access the `User's` protected data. 
+Now under OAuth2 flow, with a `Resource Owner's` permission, a `Client` can request for a `Resource Owner's` protected resources on his behalf. For this to work, the `Client` must be registered with the `Authorization Server` as a so called third party application, in which case the `Authorization Server` will be aware of both the `User` and the `Client` who wishes to access the `User's` protected data.
+
 Note that the permission to access a `User's` protected data can be revoked by the `Resource Owner` at any point in time through the `Authorization Server`.
 
 This setup now makes it possible for the `Income Summarizer` to access the income data of the `Resource Owner` on the `Income Service` using an access token that was granted by the `Authorization Server` based on the `Resource Owner's` approval.
